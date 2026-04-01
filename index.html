@@ -1,120 +1,144 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>오빠야 브리핑</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #0f172a;
-      color: white;
-    }
-    header {
-      display: flex;
-      justify-content: space-between;
-      padding: 20px;
-      border-bottom: 1px solid #1e293b;
-    }
-    nav a {
-      margin-left: 15px;
-      color: #cbd5f5;
-      text-decoration: none;
-    }
-    .container {
-      padding: 20px;
-    }
-    .hero h1 {
-      font-size: 32px;
-    }
-    .card {
-      background: #1e293b;
-      padding: 15px;
-      border-radius: 15px;
-      margin-top: 15px;
-    }
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 15px;
-    }
-    footer {
-      text-align: center;
-      padding: 20px;
-      border-top: 1px solid #1e293b;
-      margin-top: 40px;
-      color: #94a3b8;
-    }
-  </style>
+<meta charset="UTF-8">
+<title>오빠야 브리핑</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+<style>
+
+body {
+  margin: 0;
+  font-family: 'Noto Sans KR', sans-serif;
+  background: #0f172a;
+  color: #e2e8f0;
+}
+
+/* 헤더 */
+.header {
+  background: #020617;
+  padding: 20px 40px;
+  border-bottom: 1px solid #1e293b;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.nav a {
+  margin-left: 20px;
+  color: #94a3b8;
+  text-decoration: none;
+}
+
+.nav a:hover {
+  color: white;
+}
+
+/* 메인 */
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 40px;
+}
+
+/* 헤드라인 */
+.headline {
+  background: linear-gradient(135deg, #1e293b, #020617);
+  padding: 30px;
+  border-radius: 16px;
+  margin-bottom: 30px;
+}
+
+.headline h1 {
+  margin: 0;
+}
+
+/* 뉴스 카드 */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: rgba(255,255,255,0.05);
+  padding: 20px;
+  border-radius: 14px;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  background: rgba(255,255,255,0.08);
+}
+
+/* 푸터 */
+.footer {
+  text-align: center;
+  padding: 30px;
+  color: #64748b;
+}
+
+</style>
 </head>
+
 <body>
 
-<header>
-  <h2>오빠야 브리핑</h2>
-  <nav>
-    <a href="#about">소개</a>
-    <a href="#briefing">브리핑</a>
-    <a href="#contact">연락처</a>
-    <a href="#archive">자료실</a>
-  </nav>
-</header>
+<!-- 헤더 -->
+<div class="header">
+  <div class="logo">📰 오빠야 브리핑</div>
+  <div class="nav">
+    <a href="#">소개</a>
+    <a href="#">브리핑</a>
+    <a href="#">자료실</a>
+    <a href="#">연락처</a>
+  </div>
+</div>
 
+<!-- 메인 -->
 <div class="container">
 
-  <section class="hero">
+  <!-- 헤드라인 -->
+  <div class="headline">
     <h1>2026년 3월 정치·경제 브리핑</h1>
-    <p>국내외 핵심 이슈를 한눈에 정리한 전문 브리핑</p>
-  </section>
-
-  <div class="card">
-    <h3>핵심 요약</h3>
-    <p>
-      2026년 3월은 정치, 경제, 안보 전반에서 불확실성이 확대된 시기다.
-      대통령 지지율은 안정적 흐름을 유지하는 가운데 정치권 갈등은 지속되고 있으며,
-      정부는 중동 리스크 대응을 위해 비상경제 체계를 가동했다.
-      글로벌 시장은 금리 인상 우려로 위축된 상황이다.
-    </p>
+    <p>국내외 정세와 경제 흐름을 한눈에 정리했습니다.</p>
   </div>
 
-  <section id="briefing">
-    <h2>브리핑</h2>
-    <div class="grid">
-      <div class="card">
-        <h3>정치 동향</h3>
-        <p>지지율 안정세 유지, 여야 격차 확대 및 갈등 지속</p>
-      </div>
-      <div class="card">
-        <h3>경제 동향</h3>
-        <p>중동 리스크 대응, 추경 추진 및 물가 안정 정책</p>
-      </div>
-      <div class="card">
-        <h3>국제 정세</h3>
-        <p>금리 인상 우려로 글로벌 증시 하락 및 투자 심리 위축</p>
-      </div>
+  <!-- 뉴스 카드 -->
+  <div class="grid">
+
+    <div class="card">
+      <h3>정치 동향</h3>
+      <p>대통령 지지율 안정세, 정당 간 격차 확대.</p>
     </div>
-  </section>
 
-  <section id="about">
-    <h2>소개</h2>
-    <p>오빠야 브리핑은 정치·경제·국제 이슈를 빠르게 전달하는 정보 플랫폼입니다.</p>
-  </section>
+    <div class="card">
+      <h3>경제 동향</h3>
+      <p>중동 리스크 대응 비상경제체제 가동.</p>
+    </div>
 
-  <section id="archive">
-    <h2>자료실</h2>
-    <p>이전 브리핑 자료 준비 중입니다.</p>
-  </section>
+    <div class="card">
+      <h3>북한 동향</h3>
+      <p>군사 활동 강화, 전략 무력 강조 지속.</p>
+    </div>
 
-  <section id="contact">
-    <h2>연락처</h2>
-    <p>contact@oppaya.com</p>
-  </section>
+    <div class="card">
+      <h3>세계 경제</h3>
+      <p>금리 인상 우려로 글로벌 시장 약세.</p>
+    </div>
+
+  </div>
 
 </div>
 
-<footer>
-  © 2026 오빠야 브리핑
-</footer>
+<!-- 푸터 -->
+<div class="footer">
+  © 2026 오빠야 브리핑 | All rights reserved
+</div>
 
 </body>
 </html>
